@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargador de YouTube</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #formulario {
+            margin-top: 50px;
+        }
+        #url {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #botones {
+            display: flex;
+            justify-content: center;
+        }
+        .boton {
+            background-color: #7E57C2; /* Morado suave */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .boton:hover {
+            background-color: #5E35B1; /* Morado más oscuro en hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Descargador de YouTube</h1>
+    <form id="formulario" action="/descargar" method="post">
+        <label for="url">Ingresar URL:</label><br>
+        <input type="text" id="url" name="url" required><br><br>
+        
+        <div id="botones">
+            <button class="boton" type="submit" name="formato" value="audio">Descargar Audio</button>
+            <button class="boton" type="submit" name="formato" value="video">Descargar Video</button>
+        </div>
+    </form>
+</body>
+</html>
